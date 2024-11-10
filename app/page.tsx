@@ -23,14 +23,14 @@ const Page = () => {
                     type="search"
                 />
             </div>
-            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-3">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-3">
                 {search(iconsListInformation, searchValue).map(
                     ({ id, type, iconName, iconPath, description }, index) => (
                         <article
                             onClick={() => setDetailsIconById(id)}
                             id={id}
                             key={index}
-                            className="border border-gray-300 min-w-[50px] aspect-square flex justify-center items-center rounded-sm select-none cursor-pointer hover:bg-gray-200 transition-all duration-200 ease-out relative">
+                            className="border border-gray-300 min-w-[80px] aspect-square flex justify-center items-center rounded-sm select-none cursor-pointer hover:bg-gray-200 transition-all duration-200 ease-out relative">
                             <img src={`/icons/${type}/${iconPath}`} alt={description} className="size-10" />
                             <p className="text-xs text-gray-600 absolute bottom-4 text-[15px]">{iconName}</p>
                         </article>
@@ -42,7 +42,7 @@ const Page = () => {
             {iconDetails && (
                 <div className="fixed flex justify-center items-center inset-0 transition-all duration-150 ease-in-out">
                     <Overlay onClick={() => setDetailsIconById("")} />
-                    <div className="relative z-50 bg-background min-w-[90%] sm:min-w-[450px] px-5 py-6 rounded-md">
+                    <div className="relative z-50 bg-background sm:min-w-[450px] px-5 py-6 rounded-md">
                         <ModalDetailIcon
                             id={iconDetails.id}
                             type={iconDetails.type}
