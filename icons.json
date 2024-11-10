@@ -2,14 +2,26 @@
   {
     "type": "outline",
     "icons": [
-      "arrow-down.svg",
-      "gratuated.svg"
+      "arrow-right-outline.svg",
+      "arrow-up-outline.svg",
+      "bell-outline.svg",
+      "bookmark-outline.svg",
+      "calendar-outline.svg",
+      "camera-outline.svg",
+      "chat-outline.svg",
+      "check-outline.svg"
     ]
   },
   {
     "type": "solid",
     "icons": [
-      "arrow-left.svg"
+      "arrow-up-solid.svg",
+      "bell-solid.svg",
+      "bookmark-solid.svg",
+      "calendar-solid.svg",
+      "camera-solid.svg",
+      "chat-solid.svg",
+      "check-solid.svg"
     ]
   }
 ]

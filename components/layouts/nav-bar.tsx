@@ -37,7 +37,7 @@ const NavBar = () => {
 
     return (
         <>
-            <nav className="flex items-center justify-between gap-4 px-4 py-4 pt-8 md:max-w-[80%] mx-auto">
+            <nav className="flex items-center justify-between gap-4 px-4 py-4 bg-background pt-8 md:max-w-[80%] mx-auto sticky top-0 z-[950] h-[85px]">
                 <div className="flex justify-between items-center gap-4">
                     <Link href="/" className="text-sky-600 font-bold text-2xl first-letter:text-orange-400">
                         Kroma

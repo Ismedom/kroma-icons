@@ -19,7 +19,6 @@ const iconsList = iconsListType.flatMap(({ type, icons }) => {
     return icons.map((icon) => {
         return {
             type,
-            iconName: icon.split(".")[0],
             iconPath: icon,
             description: "",
             id: uuidv4(),
@@ -36,7 +35,6 @@ const unexistedIcons = iconsList.filter((icon) => {
 
 if (unexistedIcons.length > 0) {
     iconsListDetails.unshift(...unexistedIcons);
-    console.log("Unexisted icons added:", unexistedIcons);
 } else {
     console.log("No new icons to add");
 }

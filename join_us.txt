@@ -1,0 +1,19 @@
+
+
+# Help us to improve 
+
+1, Design and Optimize the SVG Icon
+Create an SVG icon and compress it to reduce the file size. Ensure it is under 50 KB.
+
+2, Add Icon to the Public Directory
+Place the optimized SVG file in the "public" directory of the project : public/ouline or public/solid
+
+
+3, Run the Finalization Script
+Run the command npm run final or pnpm run final. This will automatically generate two files: icons.json and iconsDetails.json.
+
+4, Add Icon Descriptions
+Open iconsDetails.json and add a description for each new icon you’ve added.
+
+5, Push Changes to GitHub
+Commit your changes and push them to GitHub.
