@@ -1,10 +1,15 @@
 [
-    {
-        "type": "outline",
-        "icons": ["arrowdown.svg", "student.svg"]
-    },
-    {
-        "type": "solid",
-        "icons": ["arrowLeft.svg"]
-    }
+  {
+    "type": "outline",
+    "icons": [
+      "arrow-down.svg",
+      "gratuated.svg"
+    ]
+  },
+  {
+    "type": "solid",
+    "icons": [
+      "arrow-left.svg"
+    ]
+  }
 ]
