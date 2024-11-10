@@ -1,17 +1,23 @@
 "use client";
 import Link from "next/link";
 
-import React from "react";
+import React, { useContext } from "react";
 import { Input } from "../ui/input";
+import { SearchFilterContext } from "@/provider/Provider";
 
 const NavBar = () => {
+    const { setSearchValue } = useContext(SearchFilterContext);
     return (
         <nav className="flex items-center justify-between gap-4 px-4 py-4 pt-8   md:max-w-[80%] mx-auto">
             <div className="flex justify-between items-center min-w-[60%] max-w-[80%] md:max-w-[50%] gap-4">
                 <Link href="/" className="text-sky-600 font-bold text-2xl first-letter:text-orange-400">
                     Kroma
                 </Link>
-                <Input placeholder="Type something..." type="search" />
+                <Input
+                    onChange={(e) => setSearchValue(e.currentTarget.value)}
+                    placeholder="Type something..."
+                    type="search"
+                />
             </div>
             <div className="flex gap-3 min-[100px] max-w-[500px]">
                 <p className="text-gray-600">Help us to Improve </p>
