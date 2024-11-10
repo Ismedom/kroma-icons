@@ -1,20 +1,23 @@
 [
     {
         "type": "outline",
-        "iconName": "arrowdown",
-        "iconPath": "arrowdown.svg",
-        "description": ""
+        "iconName": "arrow-down",
+        "iconPath": "arrow-down.svg",
+        "description": "arrow down, outline",
+        "id": "4a5f9f68-242f-4e4d-87a5-6cf8c0d6927b"
     },
     {
         "type": "outline",
-        "iconName": "student",
-        "iconPath": "student.svg",
-        "description": ""
+        "iconName": "gratuated",
+        "iconPath": "gratuated.svg",
+        "description": "gratuated svg",
+        "id": "b781ca96-707f-464d-962c-d6b986a10b8e"
     },
     {
         "type": "solid",
-        "iconName": "arrowLeft",
-        "iconPath": "arrowLeft.svg",
-        "description": ""
+        "iconName": "arrow-left",
+        "iconPath": "arrow-left.svg",
+        "description": "arrow-left",
+        "id": "dc5a6bed-d830-40d6-b481-6707142384a2"
     }
 ]

@@ -1,7 +1,7 @@
 //
 
 function search(
-    combinationArray: { type: string; iconName: string; iconPath: string; description: string }[],
+    combinationArray: { id: string; type: string; iconName: string; iconPath: string; description: string }[],
     searchValue?: string
 ) {
     if (!searchValue) return combinationArray;

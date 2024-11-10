@@ -11,8 +11,9 @@ console.time("Process Time");
 
 const fs = require("fs");
 const path = require("path");
-const iconsListType = require("../icons.json");
-const iconsListDetails = require("../iconsDetails.json");
+const iconsListType = require("../icons.json") || [];
+const iconsListDetails = require("../iconsDetails.json") || [];
+const { v4: uuidv4 } = require("uuid");
 
 const iconsList = iconsListType.flatMap(({ type, icons }) => {
     return icons.map((icon) => {
@@ -21,6 +22,7 @@ const iconsList = iconsListType.flatMap(({ type, icons }) => {
             iconName: icon.split(".")[0],
             iconPath: icon,
             description: "",
+            id: uuidv4(),
         };
     });
 });
@@ -33,7 +35,7 @@ const unexistedIcons = iconsList.filter((icon) => {
 });
 
 if (unexistedIcons.length > 0) {
-    iconsListDetails.pop(...unexistedIcons);
+    iconsListDetails.unshift(...unexistedIcons);
     console.log("Unexisted icons added:", unexistedIcons);
 } else {
     console.log("No new icons to add");

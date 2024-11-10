@@ -7,6 +7,8 @@ interface SearchFilterContextState {
     filter: string;
     setSearchValue: React.Dispatch<React.SetStateAction<string>>;
     setFilter: React.Dispatch<React.SetStateAction<string>>;
+    detailsIconById: string;
+    setDetailsIconById: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const initialState: SearchFilterContextState = {
@@ -14,6 +16,8 @@ const initialState: SearchFilterContextState = {
     filter: "",
     setSearchValue: () => {},
     setFilter: () => {},
+    detailsIconById: "",
+    setDetailsIconById: () => {},
 };
 
 export const SearchFilterContext = createContext<SearchFilterContextState>(initialState);
@@ -21,8 +25,9 @@ export const SearchFilterContext = createContext<SearchFilterContextState>(initi
 const Provider = ({ children }: { children: ReactNode }) => {
     const [searchValue, setSearchValue] = useState("");
     const [filter, setFilter] = useState("");
+    const [detailsIconById, setDetailsIconById] = useState("");
 
-    const value = { searchValue, setSearchValue, filter, setFilter };
+    const value = { searchValue, setSearchValue, filter, setFilter, detailsIconById, setDetailsIconById };
 
     return <SearchFilterContext.Provider value={value}>{children}</SearchFilterContext.Provider>;
 };
