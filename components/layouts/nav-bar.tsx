@@ -88,12 +88,12 @@ const NavBar = () => {
                 </div>
             </nav>
 
-            {/*for small screen */}
-            <div className="sm:hidden fixed left-0 top-0 bottom-0 z-[1000]">
-                {isOpen && <Overlay onClick={() => setIsOpen(false)} className="z-0 sm:hidden" />}
+            {/* for small screen */}
+            <div className="sm:hidden fixed left-0 top-0 bottom-0 bg-green-500 z-[1000]">
+                {isOpen && <Overlay onClick={() => setIsOpen(false)} className="absolute inset-0 bg-black/50" />}
 
                 <div
-                    className={`z-50 relative bg-background flex flex-col h-full py-8 transform transition-transform duration-150 ease-in-out ${
+                    className={`absolute left-0 top-0 bottom-0 w-44 bg-background flex flex-col h-full py-8 transform transition-transform duration-150 ease-in-out ${
                         isOpen ? "translate-x-0" : "-translate-x-full"
                     }`}>
                     <Link
