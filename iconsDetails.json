@@ -1,0 +1,20 @@
+[
+    {
+        "type": "outline",
+        "iconName": "arrowdown",
+        "iconPath": "arrowdown.svg",
+        "description": ""
+    },
+    {
+        "type": "outline",
+        "iconName": "student",
+        "iconPath": "student.svg",
+        "description": ""
+    },
+    {
+        "type": "solid",
+        "iconName": "arrowLeft",
+        "iconPath": "arrowLeft.svg",
+        "description": ""
+    }
+]
