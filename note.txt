@@ -1,5 +1,0 @@
-
-
-
-# sclae 
-use redux for statemanagement

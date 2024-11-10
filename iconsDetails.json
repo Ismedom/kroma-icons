@@ -1,23 +1,92 @@
 [
     {
         "type": "outline",
-        "iconName": "arrow-down",
-        "iconPath": "arrow-down.svg",
-        "description": "arrow down, outline",
-        "id": "4a5f9f68-242f-4e4d-87a5-6cf8c0d6927b"
+        "iconPath": "arrow-right-outline.svg",
+        "description": "Outlined arrow pointing right, commonly used for next or forward actions.",
+        "id": "a8017463-775c-4a00-b8a6-70679db76942"
     },
     {
         "type": "outline",
-        "iconName": "gratuated",
-        "iconPath": "gratuated.svg",
-        "description": "gratuated svg",
-        "id": "b781ca96-707f-464d-962c-d6b986a10b8e"
+        "iconPath": "arrow-up-outline.svg",
+        "description": "Outlined arrow pointing up, ideal for scrolling or upward navigation.",
+        "id": "6be6fd23-2ce1-4845-b4f3-78622a06c8b7"
+    },
+    {
+        "type": "outline",
+        "iconPath": "bell-outline.svg",
+        "description": "Outlined bell icon, often representing notifications or alerts.",
+        "id": "6e9d9f58-c34e-4a04-a6b7-69f67a218fa7"
+    },
+    {
+        "type": "outline",
+        "iconPath": "bookmark-outline.svg",
+        "description": "Outlined bookmark icon, great for marking or saving items.",
+        "id": "a668af4c-0e1e-4356-be30-92f5f6d5222b"
+    },
+    {
+        "type": "outline",
+        "iconPath": "calendar-outline.svg",
+        "description": "Outlined calendar icon, ideal for dates or scheduling.",
+        "id": "9dfce210-4235-4304-8ae1-9b87cc1a59e1"
+    },
+    {
+        "type": "outline",
+        "iconPath": "camera-outline.svg",
+        "description": "Outlined camera icon, suitable for photography or media.",
+        "id": "22007d85-350b-4829-b9cd-9cae9da22033"
+    },
+    {
+        "type": "outline",
+        "iconPath": "chat-outline.svg",
+        "description": "Outlined chat bubble, used for messaging or communication.",
+        "id": "dbfcf45c-5e4f-4c8b-9ea8-7fc848eb827e"
+    },
+    {
+        "type": "outline",
+        "iconPath": "check-outline.svg",
+        "description": "Outlined checkmark icon, great for indicating completed tasks.",
+        "id": "d7ef1f81-3f14-423c-813b-64420bbf14ac"
     },
     {
         "type": "solid",
-        "iconName": "arrow-left",
-        "iconPath": "arrow-left.svg",
-        "description": "arrow-left",
-        "id": "dc5a6bed-d830-40d6-b481-6707142384a2"
+        "iconPath": "arrow-up-solid.svg",
+        "description": "Solid arrow pointing up, often used for increase or upward movement.",
+        "id": "92a084c3-e700-4bc4-8772-27cb5921d822"
+    },
+    {
+        "type": "solid",
+        "iconPath": "bell-solid.svg",
+        "description": "Solid bell icon, representing notifications or alerts.",
+        "id": "a37cb480-f93f-471d-831a-7f044877603e"
+    },
+    {
+        "type": "solid",
+        "iconPath": "bookmark-solid.svg",
+        "description": "Solid bookmark icon, for saved items or quick access.",
+        "id": "047d2dea-8ef2-464a-89ba-8dc16100d9a9"
+    },
+    {
+        "type": "solid",
+        "iconPath": "calendar-solid.svg",
+        "description": "Solid calendar icon, suitable for dates and event scheduling.",
+        "id": "5e2f70b0-da63-4a25-8f1f-8e19c91171f3"
+    },
+    {
+        "type": "solid",
+        "iconPath": "camera-solid.svg",
+        "description": "Solid camera icon, often used for media or photography.",
+        "id": "ac074a27-8fdd-49ef-a04c-eeff357abe4a"
+    },
+    {
+        "type": "solid",
+        "iconPath": "chat-solid.svg",
+        "description": "Solid chat bubble, used for messaging or conversations.",
+        "id": "03634475-edf9-4a46-b1ff-92231a291a87"
+    },
+    {
+        "type": "solid",
+        "iconPath": "check-solid.svg",
+        "description": "Solid checkmark icon, representing completed tasks or approvals.",
+        "id": "4e705bcd-ab68-427c-bbef-f2413268f09b"
     }
 ]
