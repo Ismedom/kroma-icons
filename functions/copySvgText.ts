@@ -7,7 +7,7 @@ const copySvg = async ({ iconName, type }: { iconName: string; type: string }) =
 
         const svgText = await response.text();
         alert(svgText);
-        await navigator.clipboard.writeText(svgText);
+        await navigator.clipboard.writeText("svgText");
     } catch (error) {
         throw new Error("Failed to fetch SVG file");
     }
