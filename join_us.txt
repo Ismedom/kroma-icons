@@ -3,7 +3,7 @@
 # Help us to improve 
 
 1, Design and Optimize the SVG Icon
-Create an SVG icon and compress it to reduce the file size. Ensure it is under 50 KB.
+Create an SVG icon and compress it to reduce the file size. Ensure it is under 10 KB.
 
 2, Add Icon to the Public Directory
 Place the optimized SVG file in the "public" directory of the project : public/ouline or public/solid
