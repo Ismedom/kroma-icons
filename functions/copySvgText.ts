@@ -1,55 +1,57 @@
 //
 
 const copySvg = async ({ iconName, type }: { iconName: string; type: string }) => {
-    try {
-        const response = await fetch(`/icons/${type}/${iconName}.svg`);
-        if (!response.ok) throw new Error("Failed to fetch SVG file.");
+    return alert("Copy SVG");
 
-        const svgText = await response.text();
+    // try {
+    //     const response = await fetch(`/icons/${type}/${iconName}.svg`);
+    //     if (!response.ok) throw new Error("Failed to fetch SVG file.");
 
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            try {
-                await navigator.clipboard.writeText(svgText);
-                return true;
-            } catch (e) {}
-        }
+    //     const svgText = await response.text();
 
-        const textarea = document.createElement("textarea");
-        textarea.value = svgText;
+    //     if (navigator.clipboard && navigator.clipboard.writeText) {
+    //         try {
+    //             await navigator.clipboard.writeText(svgText);
+    //             return true;
+    //         } catch (e) {}
+    //     }
 
-        textarea.style.position = "fixed";
-        textarea.style.opacity = "0";
-        textarea.style.left = "-9999px";
+    //     const textarea = document.createElement("textarea");
+    //     textarea.value = svgText;
 
-        document.body.appendChild(textarea);
+    //     textarea.style.position = "fixed";
+    //     textarea.style.opacity = "0";
+    //     textarea.style.left = "-9999px";
 
-        if (navigator.userAgent.match(/ipad|iphone/i)) {
-            const range = document.createRange();
-            range.selectNodeContents(textarea);
+    //     document.body.appendChild(textarea);
 
-            const selection = window.getSelection();
-            if (selection) {
-                selection.removeAllRanges();
-                selection.addRange(range);
-            }
+    //     if (navigator.userAgent.match(/ipad|iphone/i)) {
+    //         const range = document.createRange();
+    //         range.selectNodeContents(textarea);
 
-            textarea.setSelectionRange(0, textarea.value.length);
-        } else {
-            textarea.select();
-        }
+    //         const selection = window.getSelection();
+    //         if (selection) {
+    //             selection.removeAllRanges();
+    //             selection.addRange(range);
+    //         }
 
-        try {
-            document.execCommand("copy");
-            document.body.removeChild(textarea);
-            return true;
-        } catch (err) {
-            document.body.removeChild(textarea);
-            throw new Error("Failed to copy text");
-        }
-    } catch (error) {
-        console.error("Copy failed:", error);
-        throw error;
-    }
+    //         textarea.setSelectionRange(0, textarea.value.length);
+    //     } else {
+    //         textarea.select();
+    //     }
+
+    //     try {
+    //         document.execCommand("copy");
+    //         document.body.removeChild(textarea);
+    //         return true;
+    //     } catch (err) {
+    //         document.body.removeChild(textarea);
+    //         throw new Error("Failed to copy text");
+    //     }
+    // } catch (error) {
+    //     console.error("Copy failed:", error);
+    //     throw error;
+    // }
 };
 
 export default copySvg;
