@@ -29,7 +29,7 @@ const iconsList = iconsListType.flatMap(({ type, icons }) => {
 const unexistedIcons = iconsList.filter((icon) => {
     return !iconsListDetails.some(
         (detailsIcon) =>
-            detailsIcon.iconName.trim() === icon.iconName.trim() && detailsIcon.type.trim() === icon.type.trim()
+            detailsIcon.iconPath.trim() === icon.iconPath.trim() && detailsIcon.type.trim() === icon.type.trim()
     );
 });
 

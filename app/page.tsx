@@ -8,7 +8,6 @@ import ModalDetailIcon from "@/components/ModalDetailIcon";
 import Overlay from "@/components/Overlay";
 import { Input } from "@/components/ui/input";
 import dynamic from "next/dynamic";
-import { ComponentType } from "react";
 
 interface IconInformation {
     id: string;
@@ -18,7 +17,7 @@ interface IconInformation {
 }
 
 interface IconComponents {
-    [key: string]: ComponentType;
+    [key: string]: React.ComponentType<React.SVGProps<SVGSVGElement>> & { preload?: () => void };
 }
 
 interface SearchFilterContextType {
@@ -38,7 +37,6 @@ const Page = () => {
         iconsListInformation.forEach(({ type, iconPath }: IconInformation) => {
             components[`${type}/${iconPath}`] = dynamic(() => import(`/public/icons/${type}/${iconPath}`), {
                 ssr: false,
-                loading: () => <div className="size-10 animate-pulse bg-gray-200 rounded-sm" />,
             });
         });
         return components;
@@ -50,8 +48,8 @@ const Page = () => {
 
     const handleMouseEnter = (type: string, iconPath: string): void => {
         const IconComponent = IconComponents[`${type}/${iconPath}`];
-        if (IconComponent && "preload" in IconComponent) {
-            (IconComponent as any).preload();
+        if (IconComponent && typeof IconComponent.preload === "function") {
+            IconComponent.preload();
         }
     };
 
@@ -66,27 +64,25 @@ const Page = () => {
                 />
             </div>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3 pb-8">
-                {search(iconsListInformation, searchValue).map(
-                    ({ id, type, iconPath, description }: IconInformation, index: number) => {
-                        const IconComponent = IconComponents[`${type}/${iconPath}`];
+                {search(iconsListInformation, searchValue).map(({ id, type, iconPath }: IconInformation) => {
+                    const IconComponent = IconComponents[`${type}/${iconPath}`];
 
-                        return (
-                            <article
-                                className="border border-gray-300 min-w-[80px] aspect-square flex justify-center items-center rounded-sm select-none cursor-pointer hover:bg-gray-200 transition-all duration-200 ease-out relative"
-                                id={id}
-                                key={id}
-                                onClick={() => setDetailsIconById(id)}
-                                onMouseEnter={() => handleMouseEnter(type, iconPath)}>
-                                <div className="w-10 relative">
-                                    <IconComponent />
-                                </div>
-                                <p className="text-xs text-gray-600 absolute bottom-4 text-[15px]">
-                                    {iconPath.split(".")[0]}
-                                </p>
-                            </article>
-                        );
-                    }
-                )}
+                    return (
+                        <article
+                            className="border border-gray-300 min-w-[80px] aspect-square flex justify-center items-center rounded-sm select-none cursor-pointer hover:bg-gray-200 transition-all duration-200 ease-out relative"
+                            id={id}
+                            key={id}
+                            onClick={() => setDetailsIconById(id)}
+                            onMouseEnter={() => handleMouseEnter(type, iconPath)}>
+                            <div className="w-10 relative">
+                                <IconComponent />
+                            </div>
+                            <p className="text-xs text-gray-600 absolute bottom-4 text-[15px]">
+                                {iconPath.split(".")[0]}
+                            </p>
+                        </article>
+                    );
+                })}
                 {search(iconsListInformation, searchValue).length === 0 && <div>No Icon related</div>}
             </div>
 
