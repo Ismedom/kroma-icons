@@ -14,6 +14,7 @@ const downloadSvgFile = async ({ iconName, type }: { iconName: string; type: str
         link.download = `${iconName}-copy.svg`;
 
         document.body.appendChild(link);
+        link.style.display = "none";
         link.click();
 
         document.body.removeChild(link);
