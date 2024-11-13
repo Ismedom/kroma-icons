@@ -24,10 +24,10 @@ const ModalDetailIcon = ({
     iconPath: string;
     description: string;
 }) => {
-    const IconComponent = dynamic(() => import(`/public/icons/${type}/${iconPath}`).catch(() => null), {
-        loading: () => <LoadingSpinner />,
-        ssr: false,
-    });
+    // const IconComponent = dynamic(() => import(`/public/icons/${type}/${iconPath}`).catch(() => null), {
+    //     loading: () => <LoadingSpinner />,
+    //     ssr: false,
+    // });
 
     return (
         <div className="w-full" id={id}>
