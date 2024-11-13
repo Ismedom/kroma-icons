@@ -32,13 +32,8 @@ const ModalDetailIcon = ({
     return (
         <div className="w-full" id={id}>
             <div className="flex flex-col justify-center items-center">
-                {IconComponent ? (
-                    <div className="w-[100px]">
-                        <IconComponent />
-                    </div>
-                ) : (
-                    <Image src={`/icons/${type}/${iconPath}`} alt={iconName} width={100} height={100} />
-                )}
+                <Image src={`/icons/${type}/${iconPath}`} alt={iconName} width={100} height={100} />
+
                 <h3 className="first-letter:uppercase font-semibold text-gray-600">{iconName}</h3>
                 <p className="text-gray-500">{description}</p>
                 <div className="flex gap-2 justify-center mt-6 pt-3 border-t border-t-gray-400 w-full">
