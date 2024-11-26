@@ -1,8 +1,8 @@
-# Next.js Project shshsks
+# Next.js Project
 
 This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started home 
+## Getting Started
 
 1. Start the development server:
 
