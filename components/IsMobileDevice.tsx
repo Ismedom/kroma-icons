@@ -28,7 +28,7 @@ const IsMobileDevice = () => {
                     <Overlay onClick={() => setIsOpen(false)} className="z-[1]" />
                     <div className="bg-gray-100 z-10 p-4 py-6 rounded-md">
                         <h1 className="first-letter:text-orange-600 text-sky-600 font-bold">Kroma Icons</h1>
-                        <p>You are opened on Mobile Device, Some feature may doesn't work!</p>
+                        <p>You are opened on Mobile Device, Some feature may doesn&apos;t work!</p>
                         <Button onClick={() => setIsOpen(false)} className="bg-green-700 hover:bg-green-600 mt-3">
                             Okay
                         </Button>
