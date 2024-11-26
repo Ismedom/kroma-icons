@@ -1,21 +1,20 @@
-
-# Next.js Project
+# Next.js Project shshsks
 
 This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Getting Started home 
 
 1. Start the development server:
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   # or
-   bun dev
-   ```
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    # or
+    bun dev
+    ```
 
 2. Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
@@ -29,8 +28,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 For more information on Next.js, check out the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) – Detailed information on Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) – Interactive tutorial to deepen your Next.js skills.
+-   [Next.js Documentation](https://nextjs.org/docs) – Detailed information on Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) – Interactive tutorial to deepen your Next.js skills.
 
 Contribute or provide feedback on the [Next.js GitHub repository](https://github.com/vercel/next.js).
 
