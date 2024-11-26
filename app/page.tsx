@@ -60,6 +60,7 @@ const Page = () => {
             <div className="mb-5 mt-2 sticky top-[85px] bg-background z-[100]">
                 <Input
                     className="py-5"
+                    value={searchValue}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchValue(e.currentTarget.value)}
                     placeholder="Type something..."
                     type="search"

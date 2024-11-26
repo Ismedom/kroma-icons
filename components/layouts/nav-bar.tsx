@@ -14,10 +14,10 @@ const navigationbarList = [
         name: "docs",
         path: "/docs",
     },
-    {
-        name: "our guide",
-        path: "/guide",
-    },
+    // {
+    //     name: "our guide",
+    //     path: "/guide",
+    // },
     {
         name: "about us",
         path: "/about-us",
@@ -42,6 +42,7 @@ const NavBar = () => {
                     <Link href="/" className="text-sky-600 font-bold text-2xl first-letter:text-orange-400">
                         Kroma
                     </Link>
+
                     {/*for big screen */}
                     <div className="hidden sm:flex">
                         {navigationbarList.map(({ name, path }, index) => (
